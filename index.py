@@ -7,8 +7,8 @@ import inference
 import generate
 
 
+#en_speaker_3 is a nice brittish voice, set as default
+voice = "v2/en_speaker_3"
 
-
-
-generate.speech("Hello World, im using the new inference backend!")
+generate.speech("Kobold is pretty neat huh!", voice=voice)
 
