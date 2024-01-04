@@ -24,6 +24,6 @@ def save_audio_to_wav(output, filename):
 
 
 def text_to_speech(text, filename, voice):
+    randomid = random.randint(0, 10000)
     output = generate_speech(model, text, voice)
-    save_audio_to_wav(output, f"output/{filename}")
-
+    save_audio_to_wav(output, f"output/save+{randomid}")
