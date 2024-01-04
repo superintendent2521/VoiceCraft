@@ -24,11 +24,9 @@ def counter(text):
 def speech(text, cuda):
     #counter(text)
     #unused rn
-    tts = inference.TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=cuda)
-    
+    tts = inference.TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=cuda)    
     # generate speech by cloning a voice using default settings
-    wav_data = tts.tts(text=text)
-    
+    inference.generate_speech(text, cuda) 
     # convert numpy array to bytes
     wav_bytes = io.BytesIO()
     wavfile.write(wav_bytes, tts.sample_rate, wav_data)
