@@ -23,7 +23,6 @@ def counter(text):
 #actually generates the stuff,
 def speech(text, voice="v2/en_speaker_3"):
     counter(text)
-    #unused rn
-    inference.text_to_speech(text, "output.wav", voice=voice)
-
+    # Call text_to_speech and return its result
+    return inference.text_to_speech(text, "output.wav", voice=voice)
 

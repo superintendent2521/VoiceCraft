@@ -5,7 +5,7 @@ import torch
 from scipy.io.wavfile import write
 
 
-model = BarkModel.from_pretrained("suno/bark")
+model = BarkModel.from_pretrained("suno/bark", torch_dtype=torch.float16)
 processor = AutoProcessor.from_pretrained("suno/bark")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
@@ -26,4 +26,7 @@ def save_audio_to_wav(output, filename):
 def text_to_speech(text, filename, voice):
     randomid = random.randint(0, 10000)
     output = generate_speech(model, text, voice)
-    save_audio_to_wav(output, f"output/save+{randomid}")
+    save_audio_to_wav(output, f"output/save+{randomid}.wav")
+    filepath = f"output/save+{randomid}.wav"
+    print(filepath)
+    return filepath
