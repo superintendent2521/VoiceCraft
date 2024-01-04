@@ -1,6 +1,6 @@
+import sys
 sys.path.insert(0, './src')
 from flask import Flask, jsonify, request
-import sys
 import time
 import inference
 import generate
