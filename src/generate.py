@@ -22,7 +22,8 @@ def counter(text):
     return data
 #actually generates the stuff,
 def speech(text, cuda):
-    counter(text)
+    #counter(text)
+    #unused rn
     tts = inference.TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=cuda)
     
     # generate speech by cloning a voice using default settings

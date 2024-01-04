@@ -1,11 +1,12 @@
 import sys
 import base64
 import time
+sys.path.insert(0, './src')
+
 import inference
 import generate
 from flask import Flask, jsonify, request
 
-sys.path.insert(0, './src')
 
 app = Flask(__name__)
 
