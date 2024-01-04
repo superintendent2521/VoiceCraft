@@ -13,9 +13,3 @@ def generate_speech(tts, text, file_path="output/output.wav", speaker="Ana Flore
                     language=language,
                     split_sentences=split_sentences)
 
-
-#i think i have an idea,
-#Make a flask route to view the total generated audio,
-#And give them the file id back via the route,
-#EZ?
-#PLEASE?
