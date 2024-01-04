@@ -10,6 +10,6 @@ def counter(text):
         json.dump(data, json_file)
 
     return data
-
+#actually generates the stuff,
 def speech(text):
     counter(text)
