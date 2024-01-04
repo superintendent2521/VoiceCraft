@@ -1,5 +1,7 @@
 import json
 import inference
+
+#Used for stats to count total letters generated
 def counter(text):
     count = len(text)
     data = {'letter_count': count}
