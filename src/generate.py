@@ -18,6 +18,7 @@ def counter(text):
 
     return data
 #actually generates the stuff,
-def speech(text):
+def speech(text, cuda):
     counter(text)
-    inference.generate_speech(text)
+    tts = inference.TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=cuda)
+    inference.generate_speech(tts, text)
