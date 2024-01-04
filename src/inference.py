@@ -5,8 +5,8 @@ import torch
 from scipy.io.wavfile import write
 
 
-model = BarkModel.from_pretrained("suno/bark-small")
-
+model = BarkModel.from_pretrained("suno/bark")
+processor = AutoProcessor.from_pretrained("suno/bark")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
