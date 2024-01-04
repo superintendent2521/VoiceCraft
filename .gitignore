@@ -2,3 +2,4 @@ tts/
 output/
 src/__pycache__
 test.py
+letter_count.json
