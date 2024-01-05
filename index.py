@@ -21,6 +21,11 @@ def speech():
     voice = data.get('voice', "v2/en_speaker_3")  # Use default voice if not provided
     filepath = generate.speech(text, voice)
     return send_file(filepath, mimetype='audio/wav')  # Send the generated audio file
+@app.route('/health')
+def health():
+    #simple health check route
+    return "OK", 200
+
 
 if __name__ == '__main__':
     app.run(debug=True)
