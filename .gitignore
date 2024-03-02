@@ -3,4 +3,4 @@ output/
 src/__pycache__/
 test.py
 letter_count.json
-__pycache__/
+__pycache__
